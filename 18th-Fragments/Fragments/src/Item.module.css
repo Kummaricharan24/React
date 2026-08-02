@@ -1,0 +1,6 @@
+.container {
+  /* Add styles for the item container here */
+  padding: 0.5rem;
+  list-style: none;
+  background-color: #226ebb;
+}
