@@ -1,13 +1,6 @@
-function AppButton({ item, date, onDelete }) {
+function AppButton({ item, date, onDelete = () => {}, bought = false }) {
   const handleDelete = () => {
-    const confirmed = window.confirm(
-      "Are you sure you want to delete this item?"
-    );
-
-    if (confirmed) {
-      onDelete(item);
-      console.log(`${item} deleted`);
-    }
+    onDelete(item);
   };
 
   return (

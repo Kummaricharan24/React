@@ -1,16 +1,12 @@
-function Input({ extraClass = "" }) {
-  const handleChange = (event) => {
-    console.log(event.target.value);
-  };
-
+function FoodInput({ handleKeyDown }) {
   return (
     <input
       type="text"
       placeholder="Type something..."
-      className={`form-control my-3 ${extraClass}`}
-      onChange={handleChange}
+      className="form-control my-3"
+      onKeyDown={handleKeyDown}
     />
   );
 }
 
-export default Input;
+export default FoodInput;
