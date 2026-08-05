@@ -1,5 +1,5 @@
 {
-  "name": "practice",
+  "name": "calculator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "bootstrap": "npm install bootstrap@5.3.8 --save"
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
