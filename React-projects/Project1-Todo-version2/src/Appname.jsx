@@ -1,4 +1,4 @@
-function AppName() {
+function AppName({ OnkeyDown }) {
   return (
     <div className="container text-center mb-3">
       <div className="row">
@@ -7,6 +7,7 @@ function AppName() {
             type="text"
             placeholder="Enter Todo"
             className="form-control"
+            onKeyDown={OnkeyDown}
           />
         </div>
 
