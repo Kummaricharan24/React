@@ -36,11 +36,11 @@ function App() {
   };
 
   return (
-    <div>
+    <center>
       <AppName />
       <AddTodo onNewItem={handleOnNewItem} />
       <TodoItems todoItems={todoItems} onDeleteClick={handleOnDelete} />
-    </div>
+    </center>
   );
 }
 
