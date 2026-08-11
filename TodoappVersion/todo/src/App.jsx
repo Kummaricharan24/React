@@ -15,15 +15,11 @@ function App() {
   const handleOnNewItem = (itemName, itemDueDate) => {
 
 
-    const newTodoItems = [
-      ...todoItems,
-      {
-        name: itemName,
-        dueDate: itemDueDate,
-      },
-    ];
+    
 
-    setTodoItems(newTodoItems);
+    setTodoItems((currValue) => [...currValue,
+      {name: itemName, dueDate: itemDueDate },
+    ]);
   };
 
   const handleOnDelete = (itemName) => {
@@ -38,11 +34,11 @@ function App() {
     <center>
       <AppName />
       <AddTodo onNewItem={handleOnNewItem} />
-      {todoItems.length === 0 ? (
-      <EmptyApp />
-    ) : (
+      
+      <EmptyApp todoItems={todoItems} />
+    
       <TodoItems todoItems={todoItems} onDeleteClick={handleOnDelete} />
-    )}
+   
     </center>
   );
 }
